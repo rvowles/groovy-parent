@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.bluetrainsoftware.parent</groupId>
-    <artifactId>central-parent</artifactId>
+    <artifactId>java-parent</artifactId>
     <version>1.1</version>
   </parent>
 
@@ -25,48 +25,10 @@
 
   <build>
     <plugins>
-      <plugin>
-        <groupId>org.jacoco</groupId>
-        <artifactId>jacoco-maven-plugin</artifactId>
-        <version>0.6.2.201302030002</version>
-        <executions>
-          <execution>
-            <id>prepare-agent</id>
-            <goals>
-              <goal>prepare-agent</goal>
-            </goals>
-          </execution>
-          <execution>
-            <id>report</id>
-            <phase>prepare-package</phase>
-            <goals>
-              <goal>report</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <version>2.14</version>
-        <configuration>
-          <useSystemClassLoader>true</useSystemClassLoader>
-          <useManifestOnlyJar>false</useManifestOnlyJar>
-          <failIfNoTests>false</failIfNoTests>
-          <includes>
-            <include>**/*Test.java</include>
-            <include>**/*Tests.java</include>
-          </includes>
-          <excludes>
-            <exclude>**/*$*</exclude>
-          </excludes>
-        </configuration>
-      </plugin>
 
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>2.3.2</version>
+        <version>3.1</version>
         <configuration>
           <compilerId>groovy-eclipse-compiler</compilerId>
           <!-- set verbose to be true if you want lots of uninteresting messages -->
@@ -78,13 +40,13 @@
           <dependency>
             <groupId>org.codehaus.groovy</groupId>
             <artifactId>groovy-eclipse-compiler</artifactId>
-            <version>2.7.0-01</version>
+            <version>2.8.0-01</version>
           </dependency>
           <dependency>
             <!-- force a newer version of Groovy -->
             <groupId>org.codehaus.groovy</groupId>
             <artifactId>groovy-eclipse-batch</artifactId>
-            <version>2.1.1-01</version>
+            <version>2.1.5-03</version>
           </dependency>
         </dependencies>
       </plugin>
