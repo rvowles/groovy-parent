@@ -7,7 +7,7 @@
   </parent>
 
   <artifactId>groovy-parent</artifactId>
-  <version>1.2-SNAPSHOT</version>
+  <version>1.2</version>
   <packaging>pom</packaging>
   <name>Blue Train Software Ltd - Groovy Parent</name>
 
@@ -20,7 +20,7 @@
     <connection>scm:git:git@github.com:rvowles/groovy-parent.git</connection>
     <developerConnection>scm:git:git@github.com:rvowles/groovy-parent.git</developerConnection>
     <url>git@github.com:rvowles/groovy-parent.git</url>
-    <tag>HEAD</tag>
+    <tag>groovy-parent-1.2</tag>
   </scm>
 
   <build>
